@@ -47,43 +47,6 @@ body {
     margin: 0 auto;
 }
 
-.btn-lg {
-    text-decoration: none;
-    background-color: #10214b;
-    color: #fff;
-    width: 300px;
-    font-size: 2rem;
-    font-family: 'Garamond', serif;
-}
-
-.welcome {
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #10214b;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-    background: linear-gradient(45deg, #4176fc, #fdfff7);
-}
-
-section h2 {
-    color: #fff;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.product {
-    background-color: #fdfff7;
-}
-
-.product img {
-    height: 400px;
-    object-fit: cover;
-}
-
 footer {
     background-color: #201f24;
     color: #fff;
