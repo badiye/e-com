@@ -1,203 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Shop - Basic E-Commerce</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="assets/style.css"/>
-        <style>
-            body {
-            background-color: #10214b;
-            padding-top: 80px;
-            }
-            .product {
-            background-color: #fdfff7;
-            }
-            .product img {
-            height: 250px;
-            object-fit: cover;
-            }
-            .nav-tabs .nav-link {
-            color: #fff;
-            }
-            .nav-tabs .nav-link.active {
-            background-color: #4176fc;
-            border: none;
-            }
-        </style>
-    </head>
-    <body>
-<!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">BASIC</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
-            <div class="mx-auto d-flex justify-content-center">
-                <ul class="navbar-nav mb-2 mb-lg-0 nav-links">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                </ul>
-            </div>
-            </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Basic E-Commerce</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <style>
+    body {
+        background-color: #10214b;
+        padding-top: 80px;
+    }
+    .product {
+        background-color: #fdfff7;
+    }
+    .product img {
+        height: 250px;
+        object-fit: cover;
+    }
+    .nav-tabs .nav-link {
+        color: #fff;
+    }
+    .nav-tabs .nav-link.active {
+        background-color: #4176fc;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">BASIC</a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+        <div class="mx-auto d-flex justify-content-center">
+            <ul class="navbar-nav mb-2 mb-lg-0 nav-links">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            </ul>
         </div>
-        </nav>
+        </div>
+    </div>
+    </nav>
 
-        <!-- Shop Tabs -->
-        <div class="container mt-4">
-        <h2 class="text-white text-center mb-4">Shop by Category</h2>
+    <!-- Shop Tabs -->
+    <div class="container mt-4">
+    <h2 class="text-white text-center mb-4">Shop by Category</h2>
+    <ul class="nav nav-tabs justify-content-center mb-4" id="shopTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">All</button>
+        </li>
+        <li class="nav-item" role="presentation">
+        <button class="nav-link" id="electronics-tab" data-bs-toggle="tab" data-bs-target="#phone" type="button" role="tab">Smart Phones</button>
+        </li>
+        <li class="nav-item" role="presentation">
+        <button class="nav-link" id="clothing-tab" data-bs-toggle="tab" data-bs-target="#computer" type="button" role="tab">Computers</button>
+        </li>
+        <li class="nav-item" role="presentation">
+        <button class="nav-link" id="accessories-tab" data-bs-toggle="tab" data-bs-target="#accessories" type="button" role="tab">Accessories</button>
+        </li>
+    </ul>
 
-        <!-- Tabs -->
-        <ul class="nav nav-tabs justify-content-center mb-4" id="shopTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">All</button>
-            </li>
-            <li class="nav-item" role="presentation">
-            <button class="nav-link" id="electronics-tab" data-bs-toggle="tab" data-bs-target="#electronics" type="button" role="tab">Electronics</button>
-            </li>
-            <li class="nav-item" role="presentation">
-            <button class="nav-link" id="clothing-tab" data-bs-toggle="tab" data-bs-target="#clothing" type="button" role="tab">Clothing</button>
-            </li>
-            <li class="nav-item" role="presentation">
-            <button class="nav-link" id="accessories-tab" data-bs-toggle="tab" data-bs-target="#accessories" type="button" role="tab">Accessories</button>
-            </li>
-        </ul>
-
-        <!-- Tab Content -->
-        <div class="tab-content" id="shopTabContent">
-
-            <!-- All Products -->
-            <div class="tab-pane fade show active" id="all" role="tabpanel">
-            <div class="row g-4">
-                <!-- Repeat these product cards in other tabs as well -->
-                <div class="col-md-4">
-                <div class="card product h-100">
-                    <img src="images/phone.jpg" class="card-img-top" alt="Smartphone">
-                    <div class="card-body">
-                    <h5 class="card-title">Smartphone</h5>
-                    <p class="card-text">$139.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="card product h-100">
-                    <img src="images/pc.jpg" class="card-img-top" alt="Laptop">
-                    <div class="card-body">
-                    <h5 class="card-title">Laptop</h5>
-                    <p class="card-text">$529.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="card product h-100">
-                    <img src="images/airpod.jpg" class="card-img-top" alt="AirPods">
-                    <div class="card-body">
-                    <h5 class="card-title">AirPods</h5>
-                    <p class="card-text">$1.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- Smart Phones -->
-            <div class="tab-pane fade" id="phone" role="tabpanel">
-            <div class="row g-4">
-                <div class="col-md-6">
-                <div class="card product h-100">
-                    <img src="images/phone.jpg" class="card-img-top" alt="Phone">
-                    <div class="card-body">
-                    <h5 class="card-title">IPhone</h5>
-                    <p class="card-text">$129.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-6">
-                <div class="card product h-100">
-                    <img src="images/phone.jpg" class="card-img-top" alt="Phone">
-                    <div class="card-body">
-                    <h5 class="card-title">IPhone</h5>
-                    <p class="card-text">$129.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- Computers -->
-            <div class="tab-pane fade" id="computer" role="tabpanel">
-            <div class="row g-4">
-                <div class="col-md-4">
-                <div class="card product h-100">
-                    <img src="images/pc.jpg" class="card-img-top" alt="Laptop">
-                    <div class="card-body">
-                    <h5 class="card-title">HP</h5>
-                    <p class="card-text">$529.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="card product h-100">
-                    <img src="images/pc.jpg" class="card-img-top" alt="Laptop">
-                    <div class="card-body">
-                    <h5 class="card-title">HP</h5>
-                    <p class="card-text">$529.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- Accessories -->
-            <div class="tab-pane fade" id="accessories" role="tabpanel">
-            <div class="row g-4">
-                <div class="col-md-4">
-                <div class="card product h-100">
-                    <img src="images/airpod.jpg" class="card-img-top" alt="AirPods">
-                    <div class="card-body">
-                    <h5 class="card-title">AirPods</h5>
-                    <p class="card-text">$1.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="card product h-100">
-                    <img src="images/airpod.jpg" class="card-img-top" alt="AirPods">
-                    <div class="card-body">
-                    <h5 class="card-title">AirPods</h5>
-                    <p class="card-text">$1.99</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-
+    <div class="tab-content" id="shopTabContent">
+        <!-- All Products -->
+        <div class="tab-pane fade show active" id="all" role="tabpanel">
+        <div class="row g-4">
+            <!-- Add your product cards for all categories here -->
         </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="text-center mt-5">
-        <div class="container">
-            <p class="mb-1 text-white">© 2025 Basic E-Commerce. All rights reserved.</p>
-            <small><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></small>
+        <!-- Smart Phones -->
+        <div class="tab-pane fade" id="phone" role="tabpanel">
+        <div class="row g-4">
+            <div class="col-md-6">
+            <div class="card product h-100">
+                <img src="images/phone.jpg" class="card-img-top" alt="Phone" />
+                <div class="card-body">
+                <h5 class="card-title">iPhone</h5>
+                <p class="card-text">$129.99</p>
+                <button
+                    class="btn btn-outline-primary w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    data-title="iPhone"
+                    data-description="Powerful iPhone with A15 chip"
+                    data-price="$129.99"
+                    data-instock="true"
+                    data-sale="false"
+                >Buy Now</button>
+                </div>
+            </div>
+            </div>
         </div>
-        </footer>
+        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+        <!-- Computers -->
+        <div class="tab-pane fade" id="computer" role="tabpanel">
+        <div class="row g-4">
+            <div class="col-md-4">
+            <div class="card product h-100">
+                <img src="images/pc.jpg" class="card-img-top" alt="Laptop" />
+                <div class="card-body">
+                <h5 class="card-title">HP Laptop</h5>
+                <p class="card-text">$529.99</p>
+                <button
+                    class="btn btn-outline-primary w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    data-title="HP Laptop"
+                    data-description="Efficient and lightweight laptop for work."
+                    data-price="$529.99"
+                    data-instock="true"
+                    data-sale="true"
+                >Buy Now</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Accessories -->
+        <div class="tab-pane fade" id="accessories" role="tabpanel">
+        <div class="row g-4">
+            <div class="col-md-4">
+            <div class="card product h-100">
+                <img src="images/airpod.jpg" class="card-img-top" alt="AirPods" />
+                <div class="card-body">
+                <h5 class="card-title">AirPods</h5>
+                <p class="card-text">$1.99</p>
+                <button
+                    class="btn btn-outline-primary w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                    data-title="AirPods"
+                    data-description="Wireless Bluetooth earphones."
+                    data-price="$1.99"
+                    data-instock="false"
+                    data-sale="false"
+                >Buy Now</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h4 id="modalTitle"></h4>
+            <p id="modalDescription"></p>
+            <p id="modalPrice"></p>
+            <p id="modalStock"></p>
+            <p id="modalSale"></p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary">Add to Cart</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="text-center mt-5">
+    <div class="container">
+        <p class="mb-1 text-white">© 2025 Basic E-Commerce. All rights reserved.</p>
+        <small><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></small>
+    </div>
+    </footer>
+
+    <script>
+    const modal = document.getElementById('productModal');
+    modal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        document.getElementById('modalTitle').textContent = button.getAttribute('data-title');
+        document.getElementById('modalDescription').textContent = button.getAttribute('data-description');
+        document.getElementById('modalPrice').textContent = 'Price: ' + button.getAttribute('data-price');
+        document.getElementById('modalStock').textContent = 'Stock: ' + (button.getAttribute('data-instock') === 'true' ? 'In Stock' : 'Sold Out');
+        document.getElementById('modalSale').textContent = button.getAttribute('data-sale') === 'true' ? 'On Sale!' : '';
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
